@@ -1,0 +1,82 @@
+{
+  "appName": "روبي",
+  "tagline": "نقاط البيع والمخزون الذكي",
+  "login": {
+    "title": "تسجيل الدخول",
+    "email": "اسم المستخدم",
+    "password": "كلمة المرور",
+    "submit": "دخول",
+    "error": "اسم المستخدم أو كلمة المرور غير صحيحة"
+  },
+  "nav": {
+    "dashboard": "لوحة التحكم",
+    "pos": "الكاشير",
+    "products": "المنتجات",
+    "ingredients": "المكونات",
+    "inventory": "المخزون",
+    "purchasing": "المشتريات",
+    "reports": "التقارير",
+    "settings": "الإعدادات",
+
+    "logout": "تسجيل الخروج"
+  },
+  "dashboard": {
+    "welcome": "مرحبًا، {{name}}",
+    "placeholder": "مبيعات اليوم والربح وإشارات المخزون في لمحة.",
+    "signedInAs": "مسجّل الدخول باسم"
+  },
+  "pos": {
+    "title": "نقطة البيع",
+    "categories": "الأقسام",
+    "loadingMenu": "جاري تحميل القائمة...",
+    "unavailable": "غير متوفر",
+    "cart": "السلة",
+    "emptyCart": "اضغط على منتج لبدء الطلب.",
+    "clear": "مسح",
+    "notes": "ملاحظات",
+    "discount": "خصم",
+    "tax": "ضريبة",
+    "subtotal": "المجموع الفرعي",
+    "total": "الإجمالي",
+    "payment": "الدفع",
+    "cash": "نقدًا",
+    "card": "بطاقة",
+    "wallet": "محفظة",
+    "split": "دفع مقسم",
+    "paid": "المدفوع",
+    "balanceDue": "المتبقي",
+    "change": "الباقي",
+    "confirm": "تأكيد البيع",
+    "confirming": "جاري التأكيد...",
+    "saleConfirmed": "تم تأكيد البيع وتجهيز الإيصال.",
+    "confirmFailed": "تعذر تأكيد البيع",
+    "statusFailed": "تعذر تحديث حالة الطلب",
+    "openOrders": "الطلبات المفتوحة",
+    "noOpenOrders": "لا توجد طلبات مفتوحة بعد.",
+    "items": "عناصر",
+    "markPreparing": "تحضير",
+    "markCompleted": "مكتمل",
+    "receipt": "إيصال",
+    "print": "طباعة",
+    "noReceipt": "أكد عملية بيع لعرض الإيصال.",
+    "success": "تم الدفع. شكرًا لك.",
+    "configureItem": "اختر الحجم والإضافات",
+    "size": "الحجم",
+    "chooseUpTo": "اختر حتى {{count}}",
+    "addToCart": "إضافة للسلة",
+    "cancel": "إلغاء",
+    "close": "إغلاق",
+    "dine_in": "صالة",
+    "takeaway": "سفري",
+    "increaseQty": "زيادة الكمية",
+    "decreaseQty": "تقليل الكمية",
+    "status": {
+      "CONFIRMED": "مؤكد",
+      "PREPARING": "قيد التحضير",
+      "COMPLETED": "مكتمل"
+    }
+  },
+  "language": "اللغة",
+  "comingSoon": "قريبًا"
+}
+

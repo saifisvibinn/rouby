@@ -1,0 +1,82 @@
+{
+  "appName": "Rouby",
+  "tagline": "POS + Smart Inventory",
+  "login": {
+    "title": "Sign in",
+    "email": "Username",
+    "password": "Password",
+    "submit": "Sign in",
+    "error": "Invalid username or password"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "pos": "POS",
+    "products": "Products",
+    "ingredients": "Ingredients",
+    "inventory": "Inventory",
+    "purchasing": "Purchasing",
+    "reports": "Reports",
+    "settings": "Settings",
+
+    "logout": "Log out"
+  },
+  "dashboard": {
+    "welcome": "Welcome, {{name}}",
+    "placeholder": "Today's sales, profit, and stock signals at a glance.",
+    "signedInAs": "Signed in as"
+  },
+  "pos": {
+    "title": "Point of Sale",
+    "categories": "Categories",
+    "loadingMenu": "Loading menu...",
+    "unavailable": "Unavailable",
+    "cart": "Cart",
+    "emptyCart": "Tap an item to start an order.",
+    "clear": "Clear",
+    "notes": "Notes",
+    "discount": "Discount",
+    "tax": "Tax",
+    "subtotal": "Subtotal",
+    "total": "Total",
+    "payment": "Payment",
+    "cash": "Cash",
+    "card": "Card",
+    "wallet": "Wallet",
+    "split": "Split",
+    "paid": "Paid",
+    "balanceDue": "Balance due",
+    "change": "Change",
+    "confirm": "Confirm sale",
+    "confirming": "Confirming...",
+    "saleConfirmed": "Sale confirmed and receipt ready.",
+    "confirmFailed": "Could not confirm sale",
+    "statusFailed": "Could not update order status",
+    "openOrders": "Open orders",
+    "noOpenOrders": "No open orders yet.",
+    "items": "items",
+    "markPreparing": "Preparing",
+    "markCompleted": "Completed",
+    "receipt": "Receipt",
+    "print": "Print",
+    "noReceipt": "Confirm a sale to show the receipt.",
+    "success": "Payment complete. Thank you.",
+    "configureItem": "Choose size and modifiers",
+    "size": "Size",
+    "chooseUpTo": "Choose up to {{count}}",
+    "addToCart": "Add to cart",
+    "cancel": "Cancel",
+    "close": "Close",
+    "dine_in": "Dine-in",
+    "takeaway": "Takeaway",
+    "increaseQty": "Increase quantity",
+    "decreaseQty": "Decrease quantity",
+    "status": {
+      "CONFIRMED": "Confirmed",
+      "PREPARING": "Preparing",
+      "COMPLETED": "Completed"
+    }
+  },
+  "language": "Language",
+  "comingSoon": "Coming soon"
+}
+

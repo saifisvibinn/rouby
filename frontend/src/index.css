@@ -1,0 +1,71 @@
+@import 'tailwindcss';
+
+:root {
+  --color-bg: #f7f4ef;
+  --color-surface: #ffffff;
+  --color-ink: #1c1917;
+  --color-muted: #78716c;
+  --color-accent: #0f766e;
+  --color-accent-fg: #ecfdf5;
+  --color-border: #e7e5e4;
+  --font-sans: 'Segoe UI', 'Tahoma', 'Noto Sans Arabic', sans-serif;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: radial-gradient(circle at top left, #ecfdf5 0%, var(--color-bg) 45%, #fafaf9 100%);
+  color: var(--color-ink);
+  -webkit-tap-highlight-color: transparent;
+  text-size-adjust: 100%;
+}
+
+.safe-top {
+  padding-top: max(0.75rem, env(safe-area-inset-top));
+}
+
+/* Prevent iOS zoom on focused inputs */
+@media (max-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+
+@media print {
+  body {
+    background: #ffffff;
+  }
+
+  body * {
+    visibility: hidden;
+  }
+
+  .pos-receipt-print,
+  .pos-receipt-print * {
+    visibility: visible;
+  }
+
+  .pos-receipt-print {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80mm;
+    border: 0;
+    box-shadow: none;
+    padding: 4mm;
+    color: #000000;
+  }
+
+  .print\:hidden {
+    display: none;
+  }
+}

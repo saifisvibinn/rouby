@@ -1,0 +1,28 @@
+{
+	# Dev: internal CA so phones can use HTTPS camera later (Phase 3B)
+	local_certs
+}
+
+localhost {
+	handle /api/* {
+		reverse_proxy api:8000
+	}
+	handle /docs* {
+		reverse_proxy api:8000
+	}
+	handle /openapi.json {
+		reverse_proxy api:8000
+	}
+	handle {
+		reverse_proxy web:5173
+	}
+}
+
+pos.local {
+	handle /api/* {
+		reverse_proxy api:8000
+	}
+	handle {
+		reverse_proxy web:5173
+	}
+}
