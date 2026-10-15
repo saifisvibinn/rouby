@@ -1,5 +1,8 @@
 .env
+.env.*
+!.env.example
 .env.local
+.env.neon
 .venv/
 **/__pycache__/
 **/.pytest_cache/

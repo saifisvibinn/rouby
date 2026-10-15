@@ -40,11 +40,18 @@ class Settings(BaseSettings):
     def normalize_database_url(cls, value: object) -> object:
         if not isinstance(value, str):
             return value
-        if value.startswith("postgres://"):
-            return value.replace("postgres://", "postgresql+asyncpg://", 1)
-        if value.startswith("postgresql://") and "+asyncpg" not in value:
-            return value.replace("postgresql://", "postgresql+asyncpg://", 1)
-        return value
+        url = value
+        if url.startswith("postgres://"):
+            url = url.replace("postgres://", "postgresql+asyncpg://", 1)
+        elif url.startswith("postgresql://") and "+asyncpg" not in url:
+            url = url.replace("postgresql://", "postgresql+asyncpg://", 1)
+        # asyncpg rejects libpq sslmode= / channel_binding=
+        url = url.replace("sslmode=require", "ssl=require")
+        url = url.replace("channel_binding=require&", "")
+        url = url.replace("&channel_binding=require", "")
+        url = url.replace("?channel_binding=require&", "?")
+        return url
+
 
     @field_validator("cors_origins", mode="before")
     @classmethod
