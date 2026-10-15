@@ -22,11 +22,23 @@ docker compose up --build
 |---|---|
 | admin | admin |
 
+## Live (free)
+
+| | URL |
+|---|---|
+| App | https://rouby-weld.vercel.app |
+| API | https://rouby-api.vercel.app |
+| GitHub | https://github.com/saifisvibinn/rouby |
+
+Login: `admin` / `admin`
+
+> Neon claimable Postgres was used for the hosted API (expires in ~72h unless you [claim it](https://neon.tech) into your Neon account). After claiming, update `DATABASE_URL` on the `rouby-api` Vercel project.
+
 ## Deploy (free)
 
-1. **Frontend (Vercel):** import the GitHub repo, set root to `frontend`, add env `VITE_API_URL` = your API URL.
-2. **API + Postgres (Render):** use [`render.yaml`](render.yaml) Blueprint, then set `CORS_ORIGINS` to your Vercel URL (comma-separated).
-3. After the API is live, rebuild the Vercel project so `VITE_API_URL` is baked into the client.
+1. **Frontend (Vercel):** project `rouby`, root `frontend`, env `VITE_API_URL`.
+2. **API (Vercel):** project `rouby-api`, root `backend`, env `DATABASE_URL`, `SECRET_KEY`, `JWT_SECRET_KEY`, `CORS_ORIGINS`.
+3. Optional Render blueprint: [`render.yaml`](render.yaml).
 
 ### Local API (Compose for db/redis only)
 
