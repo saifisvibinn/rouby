@@ -39,10 +39,12 @@ def create_app() -> FastAPI:
     app = FastAPI(title=settings.app_name, version="0.1.0")
     app.add_exception_handler(AppError, app_error_handler)  # type: ignore[arg-type]
     app.add_middleware(RequestIdMiddleware)
+    origins = settings.cors_origins
+    allow_all = origins == ["*"]
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=settings.cors_origins,
-        allow_credentials=True,
+        allow_origins=["*"] if allow_all else origins,
+        allow_credentials=not allow_all,
         allow_methods=["*"],
         allow_headers=["*"],
         expose_headers=["X-Request-ID"],
